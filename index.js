@@ -1,3 +1,5 @@
+// isplestinis variantas
+
 const getFruits = async (name) => {
     const fruits = {
         pineapple: 'ananasas',
@@ -7,7 +9,7 @@ const getFruits = async (name) => {
 
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            if (Math.random() < 0.5) {
+            if (Math.random() < 0.5) {      // Math.rangom reiksme nuo 0 iki 0.99999
                 resolve(fruits[name]);
             } else {
                 reject(`Vaisius "${name}" nerastas :(`);
@@ -22,7 +24,7 @@ const getFruits = async (name) => {
 
     try {
         console.log('1.');
-        const pineapple = await getFruits('pineapple');
+        const pineapple = await getFruits('pineapple');  // await veikia tik esant asinchroninei funkcijai ir veikia tik funkcijos viduje
         console.log(pineapple);
         vaisiai.push(pineapple);
     } catch (error) {
